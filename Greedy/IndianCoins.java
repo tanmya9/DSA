@@ -28,28 +28,54 @@
 //}
 
 
+//package Greedy;
+//import java.util.*;
+//public class IndianCoins
+//{
+//	public static void main(String args[])
+//	{
+//		Integer coins[]= {1,2,5,10,20,50,100,500,2000}; //arrays.sort works only on objects
+//		Arrays.sort(coins, Comparator.reverseOrder());
+//		
+//		int countCoins=0;
+//		int amount=590;
+//		
+//		for(int i=0;i<coins.length;i++)
+//		{
+//			while(coins[i]<=amount)
+//			{
+//				countCoins++;
+//				System.out.print(coins[i]+" ");
+//				amount-=coins[i];
+//			}
+//		}
+//		System.out.println();
+//		System.out.println("Total number of coins used "+countCoins);
+//	}
+//}
+
 package Greedy;
 import java.util.*;
-public class IndianCoins
+class IndianCoins
 {
 	public static void main(String args[])
 	{
-		Integer coins[]= {1,2,5,10,20,50,100,500,2000}; //arrays.sort works only on objects
-		Arrays.sort(coins, Comparator.reverseOrder());
+		Integer coins[]= {1,2,5,10,20,50,100,500,100};
+		//arrays.sort reverse order only works if data type is of object type
+		Arrays.sort(coins, Comparator.reverseOrder()); //directly sorts in descending order in one go
 		
 		int countCoins=0;
 		int amount=590;
-		
 		for(int i=0;i<coins.length;i++)
 		{
-			while(coins[i]<=amount)
+			while(amount>=coins[i])
 			{
 				countCoins++;
-				System.out.print(coins[i]+" ");
 				amount-=coins[i];
+				System.out.print(coins[i]+" ");
 			}
 		}
 		System.out.println();
-		System.out.println("Total number of coins used "+countCoins);
+		System.out.println("Total coins used "+countCoins);
 	}
 }
