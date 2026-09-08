@@ -35,6 +35,7 @@
 interface Computer
 {
 	void code();
+	void compiles();
 }
 class Laptop implements Computer
 {
@@ -42,12 +43,20 @@ class Laptop implements Computer
 	{
 		System.out.println("Codes");
 	}
+	public void compiles()
+	{
+		System.out.println("Complies");
+	}
 }
 class Desktop implements Computer
 {
 	public void code()
 	{
 		System.out.println("Codes faster");
+	}
+	public void compiles()
+	{
+		System.out.println("Complies");
 	}	
 }
 class Developer
