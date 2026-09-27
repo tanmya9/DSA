@@ -6,7 +6,7 @@ interface Demo
 public class Lamdareturn {
     public static void main(String args[])
     {
-        // Demo obj=new Demo(){
+        // Demo obj=new Demo(){ //anonymous object
         //     public int show(int i, int j)
         //     {
         //         return i+j;
